@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>LOGISTICA</h3>
+    </div>
+
+    <div class="card-body">
+      <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Tipo Producto</th>
+                <th scope="col">Cantidad Producto</th>
+                <th scope="col">Fecha Registro</th>
+                <th scope="col">Fecha Entrega</th>
+                <th scope="col">Puerto Entrega</th>
+                
+                <th scope="col">Placa Vehiculo</th>
+                <th scope="col">Numero Flota</th>
+                <th scope="col">Numero Guia</th>
+                <th scope="col">Precio Envio</th>
+                <th scope="col" style="text-align: center;">Descuento Otorgado %</th>
+           
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let item of logistica' class="text-center"> 
+                    <td>{{item.id}}</td>
+                    <td>{{item.tipoProducto}}</td>
+                    <td>{{item.cantidadProducto}}</td>
+                    <td>{{item.fechaRegistro}}</td>
+                    <td>{{item.fechaEntrega}}</td>
+                    <td>{{item.puertoEntrega}}</td>
+                    <td>{{item.placaVehiculo}}</td>
+                    <td>{{item.numeroFlota}}</td>
+                    <td>{{item.numeroGuia}}</td>
+                    <td>{{item.precioEnvio}}</td>
+                    <td>{{item.descuentoOtorgado}}</td>
+                     <!-- 
+                    
+                   
+                    
+                    -->
+                    <td>
+                      <button (click)="Delete(item)" class="btn btn-danger">Delete</button></td>
+                  <td></td>
+                </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="card">
+     <div class="card-header">
+          <h3>Buscar</h3>
+     </div>
+     <div class="card-body">
+      <label for="nombreCliente">Identificación:</label>
+      <input type="text" id="id" [(ngModel)]="id" />
+      <button (click)="buscar()">Buscar</button>
+      <div *ngIf="dataLogistica">
+    
+          <div class="form-group">
+              <label for="">Id:</label>
+              <input type="text" readonly="true"  name ="id" class="form-control" [(ngModel)]="dataLogistica.id" required>
+      </div> 
+      <div class="form-group">
+        <label for="">Tipo Producto:</label>
+      
+        <select  id="tipoProducto" name ="tipoProducto" class="form-control" [(ngModel)]="dataLogistica.tipoProducto" required>
+          <option>
+            CONSUMO
+          </option>
+          <option>
+            MASIVO
+          </option>
+         </select>
+       </div>
+       <div class="form-group">
+       <label for="">Cantidad Producto:</label>
+       <input type="text"  name ="cantidadProducto" class="form-control" [(ngModel)]="dataLogistica.cantidadProducto" required>
+      </div>
+
+      <div class="form-group">
+        <label for="">Placa Vehiculo:</label>
+        <input type="text"   name ="placaVehiculo" class="form-control" [(ngModel)]="dataLogistica.placaVehiculo" required>
+       </div>
+       <div class="form-group">
+        <label for="">Numero Flota:</label>
+        <input type="text"   name ="numeroFlota" class="form-control" [(ngModel)]="dataLogistica.numeroFlota" required>
+       </div>
+       <div class="form-group">
+        <label for="">Numero Guia:</label>
+        <input type="text"   name ="numeroGuia" class="form-control" [(ngModel)]="dataLogistica.numeroGuia" required>
+       </div>
+       <div class="form-group">
+        <label for="">Precio Envio:</label>
+        <input type="text"   name ="precioEnvio" class="form-control" [(ngModel)]="dataLogistica.precioEnvio" required>
+       </div>
+<!--
+
+       
+
+       
+       
+      
+  -->
+
+      <button (click)="editar()" class="btn btn-info" style="margin:10px;">Editar</button>
+    </div> 
+  </div>     
+  </div>
+  </div>
+

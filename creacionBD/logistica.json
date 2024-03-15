@@ -1,0 +1,64 @@
+[{
+  "_id": "1",
+  "tipoProducto": "CONSUMO",
+  "cantidadProducto": 222,
+  "fechaRegistro": {
+    "$date": {
+      "$numberLong": "1710531933864"
+    }
+  },
+  "fechaEntrega": {
+    "$date": {
+      "$numberLong": "1710531933864"
+    }
+  },
+  "puertoEntrega": "CARTAGENA",
+  "placaVehiculo": "456ADA",
+  "numeroFlota": "",
+  "numeroGuia": "ABCDFGH456",
+  "precioEnvio": 5000000,
+  "descuentoOtorgado": 5,
+  "_class": "co.com.s.mongo.collection.unitmeasure.LogisticaDocument"
+},{
+  "_id": "27",
+  "tipoProducto": "MASIVO",
+  "cantidadProducto": 17,
+  "fechaRegistro": {
+    "$date": {
+      "$numberLong": "1710532007613"
+    }
+  },
+  "fechaEntrega": {
+    "$date": {
+      "$numberLong": "1710532007613"
+    }
+  },
+  "puertoEntrega": "CARTAGENA",
+  "placaVehiculo": "ABC123",
+  "numeroFlota": "",
+  "numeroGuia": "12345DERGY",
+  "precioEnvio": 6000000,
+  "descuentoOtorgado": 5,
+  "_class": "co.com.s.mongo.collection.unitmeasure.LogisticaDocument"
+},{
+  "_id": "4",
+  "tipoProducto": "CONSUMO",
+  "cantidadProducto": 24,
+  "fechaRegistro": {
+    "$date": {
+      "$numberLong": "1710539479602"
+    }
+  },
+  "fechaEntrega": {
+    "$date": {
+      "$numberLong": "1710539479602"
+    }
+  },
+  "puertoEntrega": "COSTA",
+  "placaVehiculo": "ABC123",
+  "numeroFlota": "",
+  "numeroGuia": "ABCDFGH123",
+  "precioEnvio": 70000000,
+  "descuentoOtorgado": 5,
+  "_class": "co.com.s.mongo.collection.unitmeasure.LogisticaDocument"
+}]

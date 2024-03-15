@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="card">
+       <div class="card-header">
+            <h3>Adicionar Personas</h3>
+       </div>
+       <div class="card-body">
+        <form novalidate #f="ngForm" novalidate >
+          <div class="form-group">
+            <label for="">id:</label>
+            <input type="text" id="id"  name ="id" class="form-control" [(ngModel)]=id required>
+           </div>
+        
+           <div class="form-group">
+            <label for="">Tipo Producto:</label>
+          
+            <select  id="tipoProducto" name ="tipoProducto" class="form-control" [(ngModel)]=tipoProducto required>
+                <option>
+                  CONSUMO
+                </option>
+                <option>
+                  MASIVO
+                </option>
+             </select>
+           </div>
+
+           <div class="form-group">
+            <label for="">Cantidad Producto:</label>
+            <input type="text" id="cantidadProducto" name ="cantidadProducto" class="form-control" [(ngModel)]=cantidadProducto required>
+        </div> 
+
+
+        <div class="form-group">
+          <label for="fecha">Fecha Entrega:</label>
+          <input type="date" id="fecha" name="fecha" [(ngModel)]="fecha">
+        </div>
+     
+   
+     
+        <div class="form-group">
+          <label for="">Puerto Entrega:</label>
+          <input type="text" id="puertoEntrega" name ="puertoEntrega" class="form-control" [(ngModel)]=puertoEntrega required>
+         </div>
+
+ <!--
+           <div class="form-group">
+            <label for="">Placa Vehiculo:</label>
+            <input type="text" id="placaVehiculo" name ="placaVehiculo" class="form-control" [(ngModel)]=placaVehiculo required>
+           </div>
+ 
+        -->   
+
+        <div class="form-group">
+          <label for="placaVehiculo">Placa Vehiculo:</label>
+          <input type="text" id="placaVehiculo" name="placaVehiculo" class="form-control"
+                 [(ngModel)]="placaVehiculo" required pattern="[A-Z]{3}\d{3}">
+          <div *ngIf="f.controls['placaVehiculo'].errors?.pattern">
+              El formato de la placa debe ser de 3 letras seguidas de 3 números (por ejemplo, ABC123).
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="numeroFlota">Numero de Flota:</label>
+        <input type="text" id="numeroFlota" name="numeroFlota" class="form-control"
+               [(ngModel)]="numeroFlota" required pattern="[A-Z]{3}\d{4}[A-Z]">
+        <div *ngIf="f.controls['numeroFlota'].errors?.pattern">
+            El formato de la numero de flota debe ser de 3 letras seguidas de 4 números finalizando una Letra (por ejemplo, ABC1234A).
+        </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="numeroGuia">Numero de Guia:</label>
+      <input type="text" id="numeroGuia" name="numeroGuia" class="form-control"
+             [(ngModel)]="numeroGuia" required pattern="\w{10}">
+      <div *ngIf="f.controls['numeroGuia'].errors?.pattern">
+          El formato de la numero de Guia' debe ser Numero único alfanumérico de 10 dígitos.
+      </div>
+  </div>
+  
+           
+           <div class="form-group">
+            <label for="">Precio Envio:</label>
+            <input type="text" id="precioEnvio" name ="precioEnvio" class="form-control" [(ngModel)]=precioEnvio required>
+        </div>
+       <!--  -->
+           <section>
+          
+            <div class="example-button-row">
+             
+              <button (click)="Guardar()" mat-raised-button color="primary">Guardar</button>
+              
+            </div>
+          </section>
+
+       
+    </form>
+    </div>     
+    </div>
+    </div>
+
